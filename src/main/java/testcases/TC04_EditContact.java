@@ -16,7 +16,7 @@ public class TC04_EditContact extends OpentapsWrappers {
 		testDescription = "Edit a ontact";
 	}
 	@Test(dataProvider="fetchData")
-	public void loginForSuccess(String username,String password,String loginName,String firstName,String lastName, String firstName1,String lastName1) {
+	public void editContact(String username,String password,String loginName,String firstName,String lastName, String firstName1,String lastName1) {
 		new LoginPage()
 		.enterUserName(username)
 		.enterPassword(password)
