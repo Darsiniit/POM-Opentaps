@@ -28,5 +28,15 @@ public class CreateContactPage extends OpentapsWrappers {
 		clickByName(prop.getProperty("CreateContact.SubmitButton.Name"));
 		return new ViewContactPage();
 	}
+	
+	public CreateContactPage clickCreateContactEmptyFirstName() {
+		clickByName(prop.getProperty("CreateContact.SubmitButton.Name"));
+		return this;
+	}
+	
+	public CreateContactPage getFirstNameErrorMessage() {
+		System.out.println(getTextByXpath(prop.getProperty("CreateContact.EmptyFirstNameError.Xpath")));
+		return this;
+	}
 
 }

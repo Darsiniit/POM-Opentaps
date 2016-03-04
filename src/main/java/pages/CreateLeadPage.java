@@ -32,5 +32,16 @@ public class CreateLeadPage extends OpentapsWrappers {
 		clickByClassName(prop.getProperty("CreateLead.SubmitButton.Class"));
 		return new ViewLeadPage();
 	}
+	
+	public CreateLeadPage clickCreateLeadEmptyCompany() {
+		clickByClassName(prop.getProperty("CreateLead.SubmitButton.Class"));
+		return this;
+	}
+	
+	public CreateLeadPage getEmptyCompErrorMessage(){
+		System.out.println(getTextByXpath(prop.getProperty("CreateLead.EmptyCompError.Xpath")));
+		return this;
+	}
+
 
 }
